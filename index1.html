@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varlicious!</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="welcomeScreen">
+        <h1>Welcome to Varlicious!</h1>
+        <button id="startOrderBtn">Order Now</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>VARLI-CIOUS!</h1>
+            <p>Select your items and place your order</p>
+        </header>
+        
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All Items</button>
+            <button class="category-btn" data-category="Burgers">Burgers ni Varley</button>
+            <button class="category-btn" data-category="Sandwich">Sandwich ni Varley</button>
+            <button class="category-btn" data-category="Drinks">Drinks ni Varley</button>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item" data-category="Burgers">
+                <img src="https://via.placeholder.com/300x200?text=Burger+1" alt="Classic Varley Burger">
+                <div class="item-info">
+                    <h3>Classic Varley Burger</h3>
+                    <p class="description">Juicy beef patty with cheese, lettuce, and special sauce</p>
+                    <p class="price">₱120</p>
+                    <button class="add-to-cart" data-name="Classic Varley Burger" data-price="120">Add to Order</button>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="Burgers">
+                <img src="https://via.placeholder.com/300x200?text=Burger+2" alt="Spicy Varley Burger">
+                <div class="item-info">
+                    <h3>Spicy Varley Burger</h3>
+                    <p class="description">Beef patty with jalapeños, pepper jack cheese, and spicy mayo</p>
+                    <p class="price">₱135</p>
+                    <button class="add-to-cart" data-name="Spicy Varley Burger" data-price="135">Add to Order</button>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="Sandwich">
+                <img src="https://via.placeholder.com/300x200?text=Sandwich+1" alt="Varley Club Sandwich">
+                <div class="item-info">
+                    <h3>Varley Club Sandwich</h3>
+                    <p class="description">Triple-decker with chicken, bacon, lettuce, tomato, and mayo</p>
+                    <p class="price">₱110</p>
+                    <button class="add-to-cart" data-name="Varley Club Sandwich" data-price="110">Add to Order</button>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="Drinks">
+                <img src="https://via.placeholder.com/300x200?text=Drink+1" alt="Varley Iced Tea">
+                <div class="item-info">
+                    <h3>Varley Iced Tea</h3>
+                    <p class="description">Refreshing house-blend iced tea</p>
+                    <p class="price">₱50</p>
+                    <button class="add-to-cart" data-name="Varley Iced Tea" data-price="50">Add to Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom fixed order bar -->
+    <div class="order-bar" id="orderBar">
+        <div class="order-bar-header">
+            <h2>My Orders</h2>
+            <button class="toggle-order-btn" id="toggleOrderBtn">▲</button>
+        </div>
+        <div class="order-content" id="orderContent">
+            <div class="orders-list" id="ordersList">
+                <div class="empty-order">Your order is empty</div>
+            </div>
+            <div class="order-summary">
+                <div class="total-container">
+                    <span>Total:</span>
+                    <span id="orderTotal">₱0</span>
+                </div>
+                <button id="checkoutBtn" disabled>Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add padding to account for the fixed order bar -->
+    <div class="padding-bottom"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
